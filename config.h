@@ -17,7 +17,7 @@
 #pragma once
 
 #define SPLIT
-// #define VBUS
+#define VBUS
 
 #ifdef SPLIT
 
@@ -25,7 +25,7 @@
     #undef EE_HANDS
     #undef SPLIT_USB_DETECT
 
-    // Master on the --
+    // Master on the left --
     #define USB_VBUS_PIN GP10
     #define SPLIT_HAND_PIN GP10
 
@@ -40,11 +40,11 @@
 #endif
 
 /* Auto shift ♥ */
-#define AUTO_SHIFT_TIMEOUT 110
-#define TAPPING_TERM 110
+#define AUTO_SHIFT_TIMEOUT 120
+#define TAPPING_TERM 120
 
 /* Combos ♥ ♥ */
-#define COMBO_TERM 16
+#define COMBO_TERM 20
 // #define COMBO_ONLY_FROM_LAYER 0
 
 /* Unicode */

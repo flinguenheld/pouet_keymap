@@ -61,7 +61,7 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   case KC_AMPERSAND:
   case KC_AT:
   case KC_BACKSLASH:
-  case KC_CIRCUMFLEX:
+  case KC_CIRC:
   case KC_COLON:
   case KC_COMMA:
   case KC_DOLLAR:
@@ -94,20 +94,26 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   case KC_RIGHT_PAREN:
 
   /* French */
-  case CS_A_GRAVE:
-  case CS_E_GRAVE:
-  case CS_U_GRAVE:
+  case FR_A_GRAVE:
+  case FR_E_GRAVE:
+  case FR_I_GRAVE:
+  case FR_O_GRAVE:
+  case FR_U_GRAVE:
+  case FR_Y_GRAVE:
 
-  case CS_A_CIRCUMFLEX:
-  case CS_E_CIRCUMFLEX:
-  case CS_I_CIRCUMFLEX:
-  case CS_O_CIRCUMFLEX:
-  case CS_U_CIRCUMFLEX:
+  case FR_A_CIRC:
+  case FR_E_CIRC:
+  case FR_I_CIRC:
+  case FR_O_CIRC:
+  case FR_U_CIRC:
+  case FR_Y_CIRC:
 
-  case CS_E_DIAERESIS:
-  case CS_I_DIAERESIS:
-  case CS_U_DIAERESIS:
-  case CS_Y_DIAERESIS:
+  case FR_A_DIAE:
+  case FR_E_DIAE:
+  case FR_I_DIAE:
+  case FR_O_DIAE:
+  case FR_U_DIAE:
+  case FR_Y_DIAE:
 
   case CS_QU:
   case CS_TION:
@@ -152,12 +158,12 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_BACKSLASH);
     }
     break;
-  case KC_CIRCUMFLEX:
+  case KC_CIRC:
     if (shifted) {
-      tap_code16(KC_CIRCUMFLEX);
-      tap_code16(KC_CIRCUMFLEX);
+      tap_code16(KC_CIRC);
+      tap_code16(KC_CIRC);
     } else {
-      tap_code16(KC_CIRCUMFLEX);
+      tap_code16(KC_CIRC);
     }
     break;
   case KC_COLON:
@@ -389,7 +395,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
 
   /* French
      Release is not necessary with 'send_unicode_string()' */
-  case CS_A_GRAVE:
+  case FR_A_GRAVE:
     if (shifted) {
       tap_code16(US_DGRV);
       tap_code16(S(KC_A));
@@ -398,7 +404,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_A);
     }
     break;
-  case CS_E_GRAVE:
+  case FR_E_GRAVE:
     if (shifted) {
       tap_code16(US_DGRV);
       tap_code16(S(KC_E));
@@ -407,7 +413,25 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_E);
     }
     break;
-  case CS_U_GRAVE:
+  case FR_I_GRAVE:
+    if (shifted) {
+      tap_code16(US_DGRV);
+      tap_code16(S(KC_I));
+    } else {
+      tap_code16(US_DGRV);
+      tap_code16(KC_I);
+    }
+    break;
+  case FR_O_GRAVE:
+    if (shifted) {
+      tap_code16(US_DGRV);
+      tap_code16(S(KC_O));
+    } else {
+      tap_code16(US_DGRV);
+      tap_code16(KC_O);
+    }
+    break;
+  case FR_U_GRAVE:
     if (shifted) {
       tap_code16(US_DGRV);
       tap_code16(S(KC_U));
@@ -416,8 +440,17 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_U);
     }
     break;
+  case FR_Y_GRAVE:
+    if (shifted) {
+      tap_code16(US_DGRV);
+      tap_code16(S(KC_Y));
+    } else {
+      tap_code16(US_DGRV);
+      tap_code16(KC_Y);
+    }
+    break;
 
-  case CS_A_CIRCUMFLEX:
+  case FR_A_CIRC:
     if (shifted) {
       tap_code16(US_DCIR);
       tap_code16(S(KC_A));
@@ -426,7 +459,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_A);
     }
     break;
-  case CS_E_CIRCUMFLEX:
+  case FR_E_CIRC:
     if (shifted) {
       tap_code16(US_DCIR);
       tap_code16(S(KC_E));
@@ -435,7 +468,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_E);
     }
     break;
-  case CS_I_CIRCUMFLEX:
+  case FR_I_CIRC:
     if (shifted) {
       tap_code16(US_DCIR);
       tap_code16(S(KC_I));
@@ -444,7 +477,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_I);
     }
     break;
-  case CS_O_CIRCUMFLEX:
+  case FR_O_CIRC:
     if (shifted) {
       tap_code16(US_DCIR);
       tap_code16(S(KC_O));
@@ -453,7 +486,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_O);
     }
     break;
-  case CS_U_CIRCUMFLEX:
+  case FR_U_CIRC:
     if (shifted) {
       tap_code16(US_DCIR);
       tap_code16(S(KC_U));
@@ -462,8 +495,26 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_U);
     }
     break;
+  case FR_Y_CIRC:
+    if (shifted) {
+      tap_code16(US_DCIR);
+      tap_code16(S(KC_Y));
+    } else {
+      tap_code16(US_DCIR);
+      tap_code16(KC_Y);
+    }
+    break;
 
-  case CS_E_DIAERESIS:
+  case FR_A_DIAE:
+    if (shifted) {
+      tap_code16(US_DIAE);
+      tap_code16(S(KC_A));
+    } else {
+      tap_code16(US_DIAE);
+      tap_code16(KC_A);
+    }
+    break;
+  case FR_E_DIAE:
     if (shifted) {
       tap_code16(US_DIAE);
       tap_code16(S(KC_E));
@@ -472,7 +523,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_E);
     }
     break;
-  case CS_I_DIAERESIS:
+  case FR_I_DIAE:
     if (shifted) {
       tap_code16(US_DIAE);
       tap_code16(S(KC_I));
@@ -481,7 +532,16 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_I);
     }
     break;
-  case CS_U_DIAERESIS:
+  case FR_O_DIAE:
+    if (shifted) {
+      tap_code16(US_DIAE);
+      tap_code16(S(KC_O));
+    } else {
+      tap_code16(US_DIAE);
+      tap_code16(KC_O);
+    }
+    break;
+  case FR_U_DIAE:
     if (shifted) {
       tap_code16(US_DIAE);
       tap_code16(S(KC_U));
@@ -490,7 +550,7 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_U);
     }
     break;
-  case CS_Y_DIAERESIS:
+  case FR_Y_DIAE:
     if (shifted) {
       tap_code16(US_DIAE);
       tap_code16(S(KC_Y));

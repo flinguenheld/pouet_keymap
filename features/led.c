@@ -68,6 +68,11 @@ void housekeeping_task_user(void) {
                 rgblight_sethsv(HSV_ORANGE);
                 active = true;
             break;
+
+            case _FR:;
+                rgblight_sethsv(HSV_CYAN);
+                active = true;
+            break;
         }
 
         led_t led_state = host_keyboard_led_state();
