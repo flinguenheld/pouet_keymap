@@ -40,8 +40,8 @@
 #endif
 
 /* Auto shift ♥ */
-#define AUTO_SHIFT_TIMEOUT 130
-#define TAPPING_TERM 130
+// #define AUTO_SHIFT_TIMEOUT 130
+#define TAPPING_TERM 200
 
 /* Combos ♥ ♥ */
 #define COMBO_TERM 30

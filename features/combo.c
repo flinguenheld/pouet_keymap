@@ -79,8 +79,8 @@ const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
 const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
 
-const uint16_t PROGMEM combo_qu[] = {CTL_T(KC_SPACE), KC_Q, COMBO_END};
-const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), KC_T, COMBO_END};
+const uint16_t PROGMEM combo_qu[] = {LT(_SYM1, KC_SPACE), KC_Q, COMBO_END};
+const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), CTL_T(KC_T), COMBO_END};
 
 /* One hand special */
 const uint16_t PROGMEM combo_shift_left[] = {CTL_T(KC_SPACE), KC_LALT, COMBO_END};
@@ -128,14 +128,14 @@ combo_t key_combos[] = {
 void process_combo_event(uint16_t combo_index, bool pressed) {
   switch (combo_index) {
 
-  case RUST_MUT:
-    if (pressed) {
-      tap_code16(KC_AMPERSAND);
-      tap_code16(KC_M);
-      tap_code16(KC_U);
-      tap_code16(KC_T);
-      tap_code16(KC_SPACE);
-    }
-    break;
+    case RUST_MUT:
+      if (pressed) {
+        tap_code16(KC_AMPERSAND);
+        tap_code16(KC_M);
+        tap_code16(KC_U);
+        tap_code16(KC_T);
+        tap_code16(KC_SPACE);
+      }
+      break;
   }
 }
