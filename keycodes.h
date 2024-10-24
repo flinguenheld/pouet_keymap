@@ -19,7 +19,6 @@ enum custom_layers {
 enum custom_keys {
   UNICODE = QK_KB_0, // Replace SAFE_RANGE, see pr #19909
 
-  /* See auto-shift */
   FR_A_GRAVE,
   FR_E_GRAVE,
   FR_I_GRAVE,

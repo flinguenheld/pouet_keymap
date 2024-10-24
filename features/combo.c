@@ -32,25 +32,16 @@ enum combos {
   LAYER_FN,
 
   /* -- */
-  CAP_WORD,
-  CAP_LOCK,
+  // CAP_WORD,
+  // CAP_LOCK,
 
   /* French */
   // DEAD_GRAVE,
   // DEAD_CIRCUMFLEX,
   // DEAD_DIAERESIS,
 
-  E_ACUTE,
-  C_CEDILLA,
-
   QU,
   TION,
-
-  /* One hand special */
-  SHIFT_LEFT,
-  CTRL_SHIFT_LEFT,
-  ALT_SHIFT_LEFT,
-  ENTER_LEFT,
 
   /* Tests */
   RUST_MUT,
@@ -68,25 +59,19 @@ const uint16_t PROGMEM combo_adj[] = {MO(_MOUSE), MO(_ARROWS), COMBO_END};
 const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), MO(_ARROWS), COMBO_END};
 
 /* -- */
-const uint16_t PROGMEM combo_cap_word[] = {MO(_NUMERIC), KC_U, COMBO_END};
-const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
+// const uint16_t PROGMEM combo_cap_word[] = {MO(_NUMERIC), KC_U, COMBO_END};
+// const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
 
 /* -- */
 // const uint16_t PROGMEM combo_dead_grave[] = {MO(_NUMERIC), KC_I, COMBO_END};
 // const uint16_t PROGMEM combo_dead_circumflex[] = {MO(_NUMERIC), KC_T, COMBO_END};
 // const uint16_t PROGMEM combo_dead_diaeresis[] = {MO(_NUMERIC), KC_T, COMBO_END};
 
-const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
+// const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
+// const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
 
 const uint16_t PROGMEM combo_qu[] = {LT(_SYM1, KC_SPACE), KC_Q, COMBO_END};
 const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), CTL_T(KC_T), COMBO_END};
-
-/* One hand special */
-const uint16_t PROGMEM combo_shift_left[] = {CTL_T(KC_SPACE), KC_LALT, COMBO_END};
-const uint16_t PROGMEM combo_ctrl_shift_left[] = {CTL_T(KC_SPACE), GUI_T(KC_ESC), COMBO_END};
-const uint16_t PROGMEM combo_alt_shift_left[] = {KC_LALT, GUI_T(KC_ESC), COMBO_END};
-const uint16_t PROGMEM combo_enter_left[] = {MO(_MOUSE), CTL_T(KC_SPACE), COMBO_END};
 
 /* Tests */
 const uint16_t PROGMEM combo_rust_mut[] = {CTL_T(KC_SPACE), KC_O, KC_P, COMBO_END};
@@ -100,25 +85,16 @@ combo_t key_combos[] = {
     [LAYER_FN] = COMBO(combo_fn, OSL(_FN)),
 
     /* -- */
-    [CAP_WORD] = COMBO(combo_cap_word, QK_CAPS_WORD_TOGGLE),
-    [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
+    // [CAP_WORD] = COMBO(combo_cap_word, QK_CAPS_WORD_TOGGLE),
+    // [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
 
     /* French */
     // [DEAD_GRAVE] = COMBO(combo_dead_grave, US_DGRV),
     // [DEAD_CIRCUMFLEX] = COMBO(combo_dead_circumflex, US_DCIR),
     // [DEAD_DIAERESIS] = COMBO(combo_dead_diaeresis, US_DIAE),
 
-    [E_ACUTE] = COMBO(combo_e_acute, US_EACU),
-    [C_CEDILLA] = COMBO(combo_c_cedilla, US_CCED),
-
     [QU] = COMBO(combo_qu, CS_QU),
     [TION] = COMBO(combo_tion, CS_TION),
-
-    /* One hand special */
-    [SHIFT_LEFT] = COMBO(combo_shift_left, KC_LEFT_SHIFT),
-    [CTRL_SHIFT_LEFT] = COMBO(combo_ctrl_shift_left, C(S(XXXXXXX))),
-    [ALT_SHIFT_LEFT] = COMBO(combo_alt_shift_left, A(S(XXXXXXX))),
-    [ENTER_LEFT] = COMBO(combo_enter_left, KC_ENTER),
 
     /* Tests */
     [RUST_MUT] = COMBO_ACTION(combo_rust_mut),

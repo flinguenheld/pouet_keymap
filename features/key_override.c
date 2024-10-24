@@ -4,6 +4,8 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
+const key_override_t cap_lock_override = ko_make_basic(MOD_MASK_CTRL, OSL(_FR), KC_CAPS_LOCK);
+
 const key_override_t num_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_0);
 const key_override_t num_1_override = ko_make_basic(MOD_MASK_SHIFT, KC_1, KC_1);
 const key_override_t num_2_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, KC_2);
@@ -55,6 +57,9 @@ const key_override_t rdaq_override = ko_make_basic(MOD_MASK_SHIFT, US_RDAQ, US_R
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
+
+    &cap_lock_override,
+
     &num_0_override,
     &num_1_override,
     &num_2_override,
@@ -106,5 +111,3 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
     NULL // Elegantly ending the array of overrides
 };
-
-

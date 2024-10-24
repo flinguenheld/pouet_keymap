@@ -1,7 +1,7 @@
 LTO_ENABLE = yes
 
 # SRC += features/auto_shift.c
-SRC += features/cap_word.c
+# SRC += features/cap_word.c
 INTROSPECTION_KEYMAP_C = features/combo.c # Replace SRC, see issue #21137
 # SRC += features/combo.c # Replace SRC, see issue #21137
 SRC += features/leader.c
