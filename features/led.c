@@ -1,8 +1,8 @@
 // Copyright 2024 Florent Linguenheld (@FLinguenheld)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include <stdint.h>
 #include QMK_KEYBOARD_H
+#include <stdint.h>
 
 int startup_led_cycles = 4;
 int nb_qmk_cycles = 0;

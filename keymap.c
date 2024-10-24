@@ -17,95 +17,6 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
-int tap_accent(uint16_t accent, uint16_t keycode, uint16_t mods_shift)
-{
-    if (mods_shift)
-    {
-        unregister_mods(mods_shift);
-        tap_code16(accent);
-        tap_code16(S(keycode));
-        register_mods(mods_shift);
-    } else {
-        tap_code16(accent);
-        tap_code16(keycode);
-    }
-    return 0;
-}
-
-// clang-format off
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-
-    uint16_t mods_shift = get_mods() & MOD_MASK_SHIFT;
-    switch (keycode) {
-        case FR_A_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_A, mods_shift); } break;
-        case FR_E_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_E, mods_shift); } break;
-        case FR_I_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_I, mods_shift); } break;
-        case FR_O_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_O, mods_shift); } break;
-        case FR_U_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_U, mods_shift); } break;
-        case FR_Y_GRAVE:
-            if (record->event.pressed) { tap_accent(US_DGRV, KC_Y, mods_shift); } break;
-
-        case FR_A_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_A, mods_shift); } break;
-        case FR_E_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_E, mods_shift); } break;
-        case FR_I_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_I, mods_shift); } break;
-        case FR_O_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_O, mods_shift); } break;
-        case FR_U_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_U, mods_shift); } break;
-        case FR_Y_CIRC:
-            if (record->event.pressed) { tap_accent(US_DCIR, KC_Y, mods_shift); } break;
-
-        case FR_A_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_A, mods_shift); } break;
-        case FR_E_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_E, mods_shift); } break;
-        case FR_I_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_I, mods_shift); } break;
-        case FR_O_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_O, mods_shift); } break;
-        case FR_U_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_U, mods_shift); } break;
-        case FR_Y_DIAE:
-            if (record->event.pressed) { tap_accent(US_DIAE, KC_Y, mods_shift); } break;
-
-        case CS_QU:
-            if (record->event.pressed) {
-                if (mods_shift) {
-                    tap_code16(S(KC_Q));
-                    tap_code16(S(KC_U));
-                } else {
-                    tap_code16(KC_Q);
-                    tap_code16(KC_U);
-                }
-                
-            } break;
-        case CS_TION:
-            if (record->event.pressed) {
-                if (mods_shift) {
-                    tap_code16(S(KC_T));
-                    tap_code16(S(KC_I));
-                    tap_code16(S(KC_O));
-                    tap_code16(S(KC_N));
-                } else {
-                    tap_code16(KC_T);
-                    tap_code16(KC_I);
-                    tap_code16(KC_O);
-                    tap_code16(KC_N);
-                }
-            } break;
-            
-    }
-    return true;
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
@@ -116,9 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
             KC_Z      ,     KC_X    ,   US_EACU   ,     KC_B    ,                                   KC_H    ,     KC_G    ,   OSL(_FR)  ,     KC_K    ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
-    //                           |------------+---------------------+--------|   |--------+--------------+-------------|
-                                   MO(_MOUSE) , LT(_SYM1, KC_SPACE) , KC_ESC ,     KC_ENT , MO(_NUMERIC) , MO(_ARROWS)
-    //                           |------------+---------------------+--------|   |--------+--------------+-------------|
+    //                           |------------+---------------------+--------|   |--------+------------------------+-------------|
+                                   MO(_MOUSE) , LT(_SYM1, KC_SPACE) , KC_ESC ,     KC_ENT , LT(_NUMERIC, KC_SPACE) , MO(_ARROWS)
+    //                           |------------+---------------------+--------|   |--------+------------------------+-------------|
     ),
 
     [_SYM1] = LAYOUT(
@@ -143,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,                                   KC_1    ,     KC_2    ,     KC_3    ,   XXXXXXX   ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
     //                                         |---------+---------+---------|   |---------+---------+---------|
-                                                 XXXXXXX , XXXXXXX , _______ ,     _______ , XXXXXXX , XXXXXXX
+                                                 XXXXXXX , _______ , _______ ,     _______ , XXXXXXX , XXXXXXX
     //                                         |---------+---------+---------|   |---------+---------+---------|
     ),
 
@@ -156,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,                               KC_BACKSPACE,    KC_TAB   ,  S(KC_TAB)  ,   KC_DEL    ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
     //                                         |---------+---------+---------|   |---------+---------+---------|
-                                                 XXXXXXX , XXXXXXX , _______ ,     _______ , XXXXXXX , XXXXXXX
+                                                 XXXXXXX , _______ , _______ ,     _______ , _______ , XXXXXXX
     //                                         |---------+---------+---------|   |---------+---------+---------|
     ),
 
@@ -182,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          FR_A_DIAE    ,   US_AE     ,  FR_E_DIAE  ,  FR_O_DIAE  ,                                 XXXXXXX   ,  FR_Y_DIAE  ,  FR_I_DIAE  ,  FR_U_DIAE  ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
     //                                         |---------+---------+---------|   |---------+---------+---------|
-                                                 XXXXXXX , XXXXXXX , _______ ,     _______ , XXXXXXX , XXXXXXX
+                                                 XXXXXXX , _______ , _______ ,     _______ , _______ , XXXXXXX
     //                                         |---------+---------+---------|   |---------+---------+---------|
     ),
 
