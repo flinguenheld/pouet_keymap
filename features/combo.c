@@ -70,7 +70,7 @@ const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), MO(_ARROWS), COMBO_END};
 // const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
 // const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
 
-const uint16_t PROGMEM combo_qu[] = {LT(_SYM1, KC_SPACE), KC_Q, COMBO_END};
+const uint16_t PROGMEM combo_qu[] = {LT(_SYMBOLS, KC_SPACE), KC_Q, COMBO_END};
 const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), CTL_T(KC_T), COMBO_END};
 
 /* Tests */

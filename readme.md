@@ -2,15 +2,12 @@
     <img src="./images/squirrel.png">
 </div>
 
-This keymap has been made for the [Chew](https://github.com/flinguenheld/chew) keyboard.  
+This [QMK](https://docs.qmk.fm/#/) keymap has been made for the [Chew](https://github.com/flinguenheld/chew) keyboard.  
 It works with both split and monobloc versions.  
 It is inspired by [Ergo-L](https://ergol.org/) which is a French layout.  
 Nonetheless it uses the [US international extended](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_us_extended.h) keymap for all French keys.  
 
-It makes use of the _best_ [QMK](https://docs.qmk.fm/#/) features :
-- combos ❤️
-- auto shift
-- leader key
+It uses the [home-row-mods](https://precondition.github.io/home-row-mods): **A-G-C-S**
 
 <div align="center">
     <img src="https://github.com/flinguenheld/chew/raw/main/images/hazelnuts.png?raw=true">
