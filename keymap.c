@@ -34,11 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYMBOLS] = LAYOUT(
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-         KC_BACKSLASH ,   KC_HASH   ,   KC_DQUO   ,  KC_QUOTE   ,  XXXXXXX ,          XXXXXXX ,   KC_CIRC   ,   KC_GRAVE  ,   US_EURO   ,  KC_DOLLAR  ,
+           KC_EXLM    ,   KC_HASH   ,   KC_DQUO   ,  KC_QUOTE   ,  XXXXXXX ,          XXXXXXX ,   KC_LBRC   ,    KC_AT    ,   KC_RBRC   , KC_BACKSLASH,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-        KC_UNDERSCORE ,   KC_EXLM   ,   KC_COMMA  ,   KC_DOT    ,  XXXXXXX ,          XXXXXXX ,   KC_COLON  , KC_SEMICOLON, KC_QUESTION ,    KC_AT    ,
+         KC_QUESTION  ,   KC_COMMA  ,KC_UNDERSCORE,   KC_DOT    ,  XXXXXXX ,          XXXXXXX ,   KC_LPRN   ,   KC_COLON  ,   KC_RPRN   , KC_SEMICOLON,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-           XXXXXXX    ,   KC_TILDE  ,   KC_PIPE   , KC_AMPERSAND,                                 XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,
+           XXXXXXX    ,   KC_TILDE  ,   KC_PIPE   , KC_AMPERSAND,                                 KC_LCBR   ,   KC_GRAVE  ,   KC_RCBR   ,   XXXXXXX   ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
     //                                         |---------+---------+---------|   |---------+---------+---------|
                                                  _______ , XXXXXXX , _______ ,     _______ , _______ , _______
@@ -49,9 +49,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
           KC_PERCENT  ,   KC_LABK   ,   KC_EQUAL  ,   KC_RABK   ,  XXXXXXX ,          XXXXXXX ,     KC_7    ,     KC_8    ,     KC_9    ,   KC_DOT    ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-           KC_MINUS   ,   KC_PLUS   , KC_ASTERISK ,   KC_SLASH  ,  XXXXXXX ,          XXXXXXX ,     KC_4    ,     KC_5    ,     KC_6    ,    KC_0     ,
+           KC_PLUS    ,   KC_MINUS  , KC_ASTERISK ,   KC_SLASH  ,  XXXXXXX ,          XXXXXXX ,     KC_4    ,     KC_5    ,     KC_6    ,    KC_0     ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-           XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,                                   KC_1    ,     KC_2    ,     KC_3    ,   KC_COMMA  ,
+           XXXXXXX   ,    KC_CIRC   ,   US_EURO   ,  KC_DOLLAR  ,                                   KC_1    ,     KC_2    ,     KC_3    ,   KC_COMMA  ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
     //                                         |---------+---------+---------|   |---------+---------+---------|
                                                  _______ , _______ , _______ ,     _______ , XXXXXXX , _______
@@ -60,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ARROWS] = LAYOUT(
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-          QK_LEADER   ,   KC_LCBR   ,   KC_RCBR   ,   XXXXXXX   ,  XXXXXXX ,          XXXXXXX ,   KC_HOME   , KC_PAGE_DOWN,  KC_PAGE_UP ,   KC_END    ,
+           XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,  XXXXXXX ,          XXXXXXX ,   KC_HOME   , KC_PAGE_DOWN,  KC_PAGE_UP ,   KC_END    ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-           KC_LBRC    ,   KC_LPRN   ,   KC_RPRN   ,   KC_RBRC   ,  XXXXXXX ,          XXXXXXX ,   KC_LEFT   ,   KC_DOWN   ,    KC_UP    ,   KC_RIGHT  ,
+           XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,  QK_LEADER  ,  XXXXXXX ,          XXXXXXX ,   KC_LEFT   ,   KC_DOWN   ,    KC_UP    ,   KC_RIGHT  ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
            XXXXXXX    ,   XXXXXXX   ,   XXXXXXX   ,   XXXXXXX   ,                               KC_BACKSPACE,    KC_TAB   ,  S(KC_TAB)  ,   KC_DEL    ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
