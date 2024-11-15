@@ -35,16 +35,8 @@ enum combos {
   // CAP_WORD,
   // CAP_LOCK,
 
-  /* French */
-  // DEAD_GRAVE,
-  // DEAD_CIRCUMFLEX,
-  // DEAD_DIAERESIS,
-
   QU,
   TION,
-
-  /* Tests */
-  RUST_MUT,
 
   /* Just to replace the define in config.h */
   COMBO_LENGTH,
@@ -56,62 +48,44 @@ const uint16_t PROGMEM combo_leader[] = {MO(_NUMERIC), KC_L, COMBO_END};
 const uint16_t PROGMEM combo_bootloader[] = {KC_BSPC, KC_L, KC_V, KC_F, COMBO_END};
 
 const uint16_t PROGMEM combo_adj[] = {MO(_MOUSE), MO(_ARROWS), COMBO_END};
-const uint16_t PROGMEM combo_fn[] = {LT(_NUMERIC, KC_SPACE), MO(_ARROWS), COMBO_END};
+const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), MO(_ARROWS), COMBO_END};
 
 /* -- */
 // const uint16_t PROGMEM combo_cap_word[] = {MO(_NUMERIC), KC_U, COMBO_END};
 // const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
 
 /* -- */
-// const uint16_t PROGMEM combo_dead_grave[] = {MO(_NUMERIC), KC_I, COMBO_END};
-// const uint16_t PROGMEM combo_dead_circumflex[] = {MO(_NUMERIC), KC_T, COMBO_END};
-// const uint16_t PROGMEM combo_dead_diaeresis[] = {MO(_NUMERIC), KC_T, COMBO_END};
-
-// const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
-// const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
-
-const uint16_t PROGMEM combo_qu[] = {LT(_SYMBOLS, KC_SPACE), KC_Q, COMBO_END};
+const uint16_t PROGMEM combo_qu[] = {KC_SPACE, KC_Q, COMBO_END};
 const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), CTL_T(KC_T), COMBO_END};
-
-/* Tests */
-const uint16_t PROGMEM combo_rust_mut[] = {CTL_T(KC_SPACE), KC_O, KC_P, COMBO_END};
 
 /* Sequences fo keys */
 combo_t key_combos[] = {
     [LEADER] = COMBO(combo_leader, QK_LEAD),
     [BOOTLOADER] = COMBO(combo_bootloader, QK_BOOTLOADER),
 
-    [LAYER_ADJ] = COMBO(combo_adj, OSL(_ADJ)),
-    [LAYER_FN] = COMBO(combo_fn, OSL(_FN)),
+    [LAYER_ADJ] = COMBO(combo_adj, MO(_ADJ)),
+    [LAYER_FN] = COMBO(combo_fn, MO(_FN)),
 
     /* -- */
     // [CAP_WORD] = COMBO(combo_cap_word, QK_CAPS_WORD_TOGGLE),
     // [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
 
-    /* French */
-    // [DEAD_GRAVE] = COMBO(combo_dead_grave, US_DGRV),
-    // [DEAD_CIRCUMFLEX] = COMBO(combo_dead_circumflex, US_DCIR),
-    // [DEAD_DIAERESIS] = COMBO(combo_dead_diaeresis, US_DIAE),
-
     [QU] = COMBO(combo_qu, CS_QU),
     [TION] = COMBO(combo_tion, CS_TION),
-
-    /* Tests */
-    [RUST_MUT] = COMBO_ACTION(combo_rust_mut),
 };
 
 /* Specials */
 void process_combo_event(uint16_t combo_index, bool pressed) {
   switch (combo_index) {
 
-    case RUST_MUT:
-      if (pressed) {
-        tap_code16(KC_AMPERSAND);
-        tap_code16(KC_M);
-        tap_code16(KC_U);
-        tap_code16(KC_T);
-        tap_code16(KC_SPACE);
-      }
-      break;
+    // case RUST_MUT:
+    //   if (pressed) {
+    //     tap_code16(KC_AMPERSAND);
+    //     tap_code16(KC_M);
+    //     tap_code16(KC_U);
+    //     tap_code16(KC_T);
+    //     tap_code16(KC_SPACE);
+    //   }
+    //   break;
   }
 }

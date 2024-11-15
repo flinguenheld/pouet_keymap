@@ -6,7 +6,6 @@
 
 enum custom_layers {
   _BASE,
-  _SYMBOLS,
   _NUMERIC,
   _ARROWS,
   _MOUSE,

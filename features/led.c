@@ -69,6 +69,16 @@ void housekeeping_task_user(void) {
                 active = true;
             break;
 
+            case _ARROWS:;
+                rgblight_sethsv(HSV_GOLDENROD);
+                active = true;
+            break;
+
+            case _NUMERIC:;
+                rgblight_sethsv(RGB_CORAL);
+                active = true;
+            break;
+
             case _FR:;
                 rgblight_sethsv(HSV_CYAN);
                 active = true;
