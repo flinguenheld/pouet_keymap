@@ -41,7 +41,7 @@ To select the version, open the *config.h* file and comment/uncomment these line
     <img src="https://github.com/flinguenheld/chew/raw/main/images/carrots.png?raw=true">
 </div>
 
-### Layouts
+### Layout
 
 <div align="center">
     <img src="./images/layouts.png">
@@ -52,23 +52,3 @@ To select the version, open the *config.h* file and comment/uncomment these line
     <img src="./images/combos.png">
     <img src="https://github.com/flinguenheld/chew/raw/main/images/hazelnuts.png?raw=true">
 </div>
-
-### Leader
-
-| ------------------ | -------- | ------------------ | -------- | ------------------ | -------- |
-| :----------------: | :------- | :----------------: | :------- | :----------------: | :------- |
-|     C + O + P      | ©        |     M + U + L      | ×        |     L + O + V      | ♥        |
-|     R + E + G      | ®        |     D + I + V      | ÷        |     F + L + A      | ⚡       |
-|     D + I + A      | ø        |       P + M        | ±        |     S + T + A      | ✶        |
-|     D + E + G      | °        |     I + N + E      | ≠        |     B + U + L      | 💡       |
-|     S + E + C      | §        |     A + L + M      | ≈        |     I + N + F      | ℹ️        |
-|     P + O + U      | £        |     S + Q + U      | √        |     G + E + A      | ⚙️        |
-|     Y + E + N      | ¥        |     I + N + F      | ∞        |         V          | ✓        |
-|     C + E + N      | ¢        |       < + <        | ≤        |       V + B        | ✔        |
-|     B + E + T      | ß        |       > + >        | ≥        |       V + V        | ✅       |
-|     M + I + C      | µ        |     F + C + T      | ¼        |         X          | ✗        |
-|       P + I        | π        |     F + C + G      | ½        |       X + B        | ✘        |
-|     O + M + E      | Ω        |     F + H + T      | ¾        |         ?          | ❔       |
-|     U + P + F      | ⁰        |                    |          |       ? + ?        | ❓       |
-|     D + N + F      | ₀        |                    |          |         !          | ❕       |
-|                    |          |                    |          |       ! + !        | ❗       |

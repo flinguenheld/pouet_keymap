@@ -53,10 +53,10 @@ void housekeeping_task_user(void) {
             active = true;
         }
 
-        if (is_caps_word_on()) {
-            rgblight_sethsv(HSV_TEAL);
-            active = true;
-        }
+        // if (is_caps_word_on()) {
+        //     rgblight_sethsv(HSV_TEAL);
+        //     active = true;
+        // }
 
         switch (get_highest_layer(layer_state)) {
             case _ADJ:;
@@ -69,15 +69,15 @@ void housekeeping_task_user(void) {
                 active = true;
             break;
 
-            case _ARROWS:;
-                rgblight_sethsv(HSV_GOLDENROD);
-                active = true;
-            break;
+            // case _ARROWS:;
+            //     rgblight_sethsv(HSV_GOLDENROD);
+            //     active = true;
+            // break;
 
-            case _NUMERIC:;
-                rgblight_sethsv(RGB_CORAL);
-                active = true;
-            break;
+            // case _NUMERIC:;
+            //     rgblight_sethsv(RGB_CORAL);
+            //     active = true;
+            // break;
 
             case _FR:;
                 rgblight_sethsv(HSV_CYAN);
