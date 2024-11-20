@@ -31,9 +31,7 @@ enum combos {
   LAYER_ADJ,
   LAYER_FN,
 
-  /* -- */
-  // CAP_WORD,
-  // CAP_LOCK,
+  CAP_LOCK,
 
   QU,
   TION,
@@ -50,9 +48,7 @@ const uint16_t PROGMEM combo_bootloader[] = {KC_BSPC, KC_L, KC_V, KC_F, COMBO_EN
 const uint16_t PROGMEM combo_adj[] = {MO(_MOUSE), MO(_ARROWS), COMBO_END};
 const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), MO(_ARROWS), COMBO_END};
 
-/* -- */
-// const uint16_t PROGMEM combo_cap_word[] = {MO(_NUMERIC), KC_U, COMBO_END};
-// const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
+const uint16_t PROGMEM combo_cap_lock[] = {SFT_T(KC_N), SFT_T(KC_R), COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_qu[] = {KC_SPACE, KC_Q, COMBO_END};
@@ -66,9 +62,7 @@ combo_t key_combos[] = {
     [LAYER_ADJ] = COMBO(combo_adj, MO(_ADJ)),
     [LAYER_FN] = COMBO(combo_fn, MO(_FN)),
 
-    /* -- */
-    // [CAP_WORD] = COMBO(combo_cap_word, QK_CAPS_WORD_TOGGLE),
-    // [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
+    [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
 
     [QU] = COMBO(combo_qu, CS_QU),
     [TION] = COMBO(combo_tion, CS_TION),

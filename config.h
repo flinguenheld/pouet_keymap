@@ -39,11 +39,7 @@
   #endif
 #endif
 
-/* Auto shift ♥ */
-// #define AUTO_SHIFT_TIMEOUT 130
 #define TAPPING_TERM 200
-
-/* Combos ♥ ♥ */
 #define COMBO_TERM 30
 // #define COMBO_ONLY_FROM_LAYER 0
 
@@ -54,9 +50,6 @@
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 280
 #define LEADER_NO_TIMEOUT
-
-/* Cap word */
-#define CAPS_WORD_IDLE_TIMEOUT 5000
 
 /* LEDs */
 #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_HSV

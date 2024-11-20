@@ -34,9 +34,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ARROWS] = LAYOUT(
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-            KC_AT     ,   KC_LBRC   ,   KC_AMPR   ,   KC_RBRC   ,  KC_GRV  ,          XXXXXXX ,   KC_HOME   , KC_PAGE_DOWN,  KC_PAGE_UP ,   KC_END    ,
+            KC_AT     ,   KC_LBRC   ,   KC_AMPR   ,   KC_RBRC   ,  XXXXXXX ,          XXXXXXX ,   KC_HOME   , KC_PAGE_DOWN,  KC_PAGE_UP ,   KC_END    ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
-           KC_DQUO    ,   KC_LPRN   ,   KC_QUOTE  ,   KC_RPRN   ,  XXXXXXX ,          QK_LEAD ,   KC_LEFT   ,   KC_DOWN   ,    KC_UP    ,   KC_RIGHT  ,
+           KC_DQUO    ,   KC_LPRN   ,   KC_QUOTE  ,   KC_RPRN   ,  KC_GRV  ,          QK_LEAD ,   KC_LEFT   ,   KC_DOWN   ,    KC_UP    ,   KC_RIGHT  ,
     //----------------+-------------+-------------+-------------+----------|       |----------+-------------+-------------+-------------+-------------|
            XXXXXXX    ,   KC_LCBR   ,   KC_PIPE   ,   KC_RCBR   ,                                 KC_BSPC   ,    KC_TAB   ,  S(KC_TAB)  ,   KC_DEL    ,
     //----------------+-------------+-------------+-------------|                             |-------------+-------------+-------------+-------------|
