@@ -17,8 +17,8 @@ It uses the [home-row-mods](https://precondition.github.io/home-row-mods): **A-G
 
 Clone this repo in the folder :
 
-    ~/qmk_firmware/keyboards/chew/keymaps/
-    ~/qmk_firmware/keyboards/chew_mono/keymaps/
+    ~/qmk_firmware/keyboards/chew/split/keymaps/
+    ~/qmk_firmware/keyboards/chew/mono/keymaps/
 
 Move inside the folder and use this command :
 
