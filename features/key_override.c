@@ -56,7 +56,7 @@ const key_override_t ldaq_override = ko_make_basic(MOD_MASK_SHIFT, US_LDAQ, US_L
 const key_override_t rdaq_override = ko_make_basic(MOD_MASK_SHIFT, US_RDAQ, US_RDAQ);
 
 // This globally defines all key overrides to be used
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
 
     &cap_lock_override,
 
@@ -108,6 +108,4 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &euro_override,
     &ldaq_override,
     &rdaq_override,
-
-    NULL // Elegantly ending the array of overrides
 };
