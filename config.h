@@ -17,26 +17,28 @@
 #pragma once
 
 #define SPLIT
-#define VBUS
 
 #ifdef SPLIT
 
-  #ifdef VBUS
     #undef EE_HANDS
     #undef SPLIT_USB_DETECT
 
-    // Master on the left --
-    #define USB_VBUS_PIN GP10
+    // Gemini controller VBUS --
+    #define USB_VBUS_PIN GP19
     #define SPLIT_HAND_PIN GP10
+    
+    // RP2040 ZERO (no real vbus, only one side can be the master) --
+    // Master on the left --
+    // #define USB_VBUS_PIN GP10
+    // #define SPLIT_HAND_PIN GP10
 
     // Or on the right --
     // #define USB_VBUS_PIN GP12
     // #define SPLIT_HAND_PIN GP12
-  #else
+
     // Without VBus, if boot fail on cold start, increase this value (default 2000)
     // #define SPLIT_USB_TIMEOUT 8000
 
-  #endif
 #endif
 
 #define TAPPING_TERM 200
